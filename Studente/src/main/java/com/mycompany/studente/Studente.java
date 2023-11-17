@@ -19,21 +19,45 @@ public class Studente {
 
     //Costruttore vuoto
     public Studente() {
-        this.eta = 0;
         this.nome = " ";
         this.cognome = " ";
+        this.eta = 0;
         this.classe = 0;
         this.sezione = 'B';
         this.indirizzo = "LIC";
     }
     
     //Costruttore completo
-    public Studente(int eta, String nome, String cognome, int classe, char sezione, String indirizzo) {
-        this.eta = eta;
+    public Studente(String nome, String cognome, int eta, int classe, char sezione, String indirizzo) {
         this.nome = nome;
         this.cognome = cognome;
+        this.eta = eta;
         this.classe = classe;
         this.sezione = sezione;
         this.indirizzo = indirizzo;
+    }
+    
+    //Costruttore parziale, per iscrizione dello studente a inizio anno
+    public Studente(String nome, String cognome, int eta) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.eta = eta;
+    }
+    
+    //Costruttore parziale, per aggiungere ad una classe uno studente generico di cui esrvirà inserire dati
+    public Studente(int classe, char sezione, String indirizzo) {
+        this.classe = classe;
+        this.sezione = sezione;
+        this.indirizzo = indirizzo;
+    }
+    
+    //METODI SET --> Permettono di dare un valore all'attributo
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    //METODI GET --> Restituiscono il valore dell'attributo
+    public String getNome() {
+        return nome;
     }
 }

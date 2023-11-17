@@ -55,9 +55,27 @@ public class Studente {
     public void setNome(String nome) {
         this.nome = nome;
     }
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+    public void setEta(int eta) {
+        this.eta = eta;
+    }
+    public void setIndirizzo(String indirizzo) {
+        this.indirizzo = indirizzo;
+    }
     
     //METODI GET --> Restituiscono il valore dell'attributo
     public String getNome() {
         return nome;
+    }
+    public String getCognome() {
+        return cognome;
+    }
+    public int getEta() {
+        return eta;
+    }
+    public String getIndirizzo() {
+        return indirizzo;
     }
 }

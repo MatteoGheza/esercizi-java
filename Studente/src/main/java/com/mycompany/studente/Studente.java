@@ -78,4 +78,17 @@ public class Studente {
     public String getIndirizzo() {
         return indirizzo;
     }
+    
+    //Il MAIN verrà spostato in altro file, per ora solo di esempio
+    public static void main(String[] args) {
+        System.out.println("Hello world!");
+        
+        Studente matteo = new Studente("Matteo", "Gheza", 16, 3, 'B', "LIC");
+        matteo.setEta(17);
+        System.out.println("Nuova età di Matteo: " + matteo.getEta());
+        
+        Studente pippo = new Studente();
+        pippo.setNome("Mario");
+        System.out.println("Nome di pippo: " + pippo.getNome());
+    }
 }

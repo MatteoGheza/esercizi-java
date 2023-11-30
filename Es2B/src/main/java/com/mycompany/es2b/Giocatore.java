@@ -34,10 +34,19 @@ public class Giocatore {
         this.golNazionale = golNazionale;
     }
     
+    public Giocatore(String nome, String cognome, int eta) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.eta = eta;
+        this.ruolo = "";
+        this.golFatti = 0;
+        this.golNazionale = 0;
+    }
+    
     public int getEta() {
         return eta;
     }
-    public String setRuolo() {
+    public String getRuolo() {
         return ruolo;
     }
     public int getGolFatti() {

@@ -12,6 +12,13 @@ package com.mycompany.es2b;
 public class Es2B {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Giocatore topolino = new Giocatore("TopoDisney", "Malefico", 95, "portiere", 515, 58);
+        Giocatore pluto = new Giocatore();
+        Giocatore pippo = new Giocatore("Pippo", "Bianchi", 56, "attaccante", 24, 2);
+        Giocatore matteo = new Giocatore("Matteo", "Gheza", 16);
+        
+        System.out.println(topolino.nome);
+        System.out.println(pluto.cognome);
+        System.out.println(pluto.nome);
     }
 }

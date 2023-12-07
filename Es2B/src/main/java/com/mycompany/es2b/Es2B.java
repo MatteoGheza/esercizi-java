@@ -12,6 +12,9 @@ package com.mycompany.es2b;
 public class Es2B {
 
     public static void main(String[] args) {
+        //Giocatore
+        System.out.println("GIOCATORI");
+
         Giocatore topolino = new Giocatore("TopoDisney", "Malefico", 95, "portiere", 515, 58);
         Giocatore pluto = new Giocatore();
         Giocatore pippo = new Giocatore("Pippo", "Bianchi", 56, "attaccante", 24, 2);
@@ -38,5 +41,12 @@ public class Es2B {
         System.out.println("Cognome di matteo: " + matteo.cognome);
         matteo.cognome = "Gheza";
         System.out.println("Cognome di matteo: " + matteo.cognome);
+        
+        //Allenatore
+        System.out.println("ALLENATORI");
+        Allenatore antonio = new Allenatore("Antonio", "Bianchi", 45, 18, "Piamborno FC", "EdenEsine", 6);
+        System.out.println("Nome di antonio: " + antonio.nome);
+        System.out.println("Età di antonio: " + antonio.getEta());
+        antonio.palloneOro();
     }
 }

@@ -8,24 +8,27 @@ package animali;
  *
  * @author utente 2023-24
  */
-public class Leone {
+public class Panda {
     private String nome;
     private String razza;
     private int anno;
-    private boolean criniera; //true --> maschio    false --> femmina
+    private String sesso;
+    private String provenienza;
     
-    public Leone() { }
-    
-    public Leone(String nome, String razza, int anno, boolean criniera) {
+    public Panda() { }
+
+    public Panda(String nome, String razza, int anno, String sesso, String provenienza) {
         this.nome = nome;
-        this.razza =razza;
+        this.razza = razza;
         this.anno = anno;
-        this.criniera = criniera;
+        this.sesso = sesso;
+        this.provenienza = provenienza;
     }
 
     public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -33,6 +36,7 @@ public class Leone {
     public String getRazza() {
         return razza;
     }
+
     public void setRazza(String razza) {
         this.razza = razza;
     }
@@ -40,26 +44,36 @@ public class Leone {
     public int getAnno() {
         return anno;
     }
+
     public void setAnno(int anno) {
         this.anno = anno;
     }
 
-    public boolean isCriniera() {
-        return criniera;
+    public String getSesso() {
+        return sesso;
     }
-    public void setCriniera(boolean criniera) {
-        this.criniera = criniera;
+
+    public void setSesso(String sesso) {
+        this.sesso = sesso;
+    }
+
+    public String getProvenienza() {
+        return provenienza;
+    }
+
+    public void setProvenienza(String provenienza) {
+        this.provenienza = provenienza;
     }
     
     public float calcolaPrezzo() {
         float prezzo;
         
         if(anno<=2) {
-            prezzo = 50;
+            prezzo = 70;
         } else if(anno<=4) {
-            prezzo = 100;
+            prezzo = 120;
         } else {
-            prezzo = 150;
+            prezzo = 200;
         }
         
         return prezzo;

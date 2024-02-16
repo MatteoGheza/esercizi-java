@@ -25,12 +25,12 @@ public class CalcolatriceForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        n1TextField = new javax.swing.JTextField();
-        n2TextField = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        risultatoLabel = new javax.swing.JLabel();
+        lbN1 = new javax.swing.JLabel();
+        tfN1 = new javax.swing.JTextField();
+        tfN2 = new javax.swing.JTextField();
+        lbN2 = new javax.swing.JLabel();
+        lbRisultatoTitle = new javax.swing.JLabel();
+        lbRisultato = new javax.swing.JLabel();
         btnSomma = new javax.swing.JButton();
         btnDifferenza = new javax.swing.JButton();
         btnDivisione = new javax.swing.JButton();
@@ -40,34 +40,39 @@ public class CalcolatriceForm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calcolatrice");
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("N1");
+        lbN1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lbN1.setForeground(new java.awt.Color(0, 204, 204));
+        lbN1.setText("N1");
 
-        n1TextField.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        n1TextField.addActionListener(new java.awt.event.ActionListener() {
+        tfN1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        tfN1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                n1TextFieldActionPerformed(evt);
+                tfN1ActionPerformed(evt);
             }
         });
 
-        n2TextField.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        n2TextField.addActionListener(new java.awt.event.ActionListener() {
+        tfN2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        tfN2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                n2TextFieldActionPerformed(evt);
+                tfN2ActionPerformed(evt);
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setText("N2");
+        lbN2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lbN2.setForeground(new java.awt.Color(0, 204, 204));
+        lbN2.setText("N2");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel3.setText("Risultato:");
+        lbRisultatoTitle.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lbRisultatoTitle.setForeground(new java.awt.Color(0, 0, 102));
+        lbRisultatoTitle.setText("Risultato:");
 
-        risultatoLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        risultatoLabel.setText(" ");
-        risultatoLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lbRisultato.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lbRisultato.setForeground(new java.awt.Color(204, 204, 204));
+        lbRisultato.setText(" ");
+        lbRisultato.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 0)));
 
         btnSomma.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnSomma.setForeground(new java.awt.Color(51, 0, 102));
         btnSomma.setText("+");
         btnSomma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,6 +81,7 @@ public class CalcolatriceForm extends javax.swing.JFrame {
         });
 
         btnDifferenza.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnDifferenza.setForeground(new java.awt.Color(51, 0, 102));
         btnDifferenza.setText("-");
         btnDifferenza.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +90,7 @@ public class CalcolatriceForm extends javax.swing.JFrame {
         });
 
         btnDivisione.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnDivisione.setForeground(new java.awt.Color(51, 0, 102));
         btnDivisione.setText(":");
         btnDivisione.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,6 +99,7 @@ public class CalcolatriceForm extends javax.swing.JFrame {
         });
 
         btnMoltiplicazione.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnMoltiplicazione.setForeground(new java.awt.Color(51, 0, 102));
         btnMoltiplicazione.setText("x");
         btnMoltiplicazione.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +108,7 @@ public class CalcolatriceForm extends javax.swing.JFrame {
         });
 
         btnRisultato.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        btnRisultato.setForeground(new java.awt.Color(0, 255, 51));
         btnRisultato.setText("=");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -110,17 +119,17 @@ public class CalcolatriceForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(lbN1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(n1TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tfN1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                        .addComponent(jLabel2)
+                        .addComponent(lbN2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(n2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tfN2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
+                        .addComponent(lbRisultatoTitle)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(risultatoLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(lbRisultato, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(15, 15, 15))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -140,14 +149,14 @@ public class CalcolatriceForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(n1TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(n2TextField, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lbN1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfN1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbN2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfN2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(risultatoLabel))
+                    .addComponent(lbRisultatoTitle)
+                    .addComponent(lbRisultato))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
@@ -165,13 +174,13 @@ public class CalcolatriceForm extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void n1TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n1TextFieldActionPerformed
+    private void tfN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfN1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_n1TextFieldActionPerformed
+    }//GEN-LAST:event_tfN1ActionPerformed
 
-    private void n2TextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n2TextFieldActionPerformed
+    private void tfN2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfN2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_n2TextFieldActionPerformed
+    }//GEN-LAST:event_tfN2ActionPerformed
 
     private void btnSommaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSommaActionPerformed
         // TODO add your handling code here:
@@ -230,11 +239,11 @@ public class CalcolatriceForm extends javax.swing.JFrame {
     private javax.swing.JButton btnMoltiplicazione;
     private javax.swing.JButton btnRisultato;
     private javax.swing.JButton btnSomma;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField n1TextField;
-    private javax.swing.JTextField n2TextField;
-    private javax.swing.JLabel risultatoLabel;
+    private javax.swing.JLabel lbN1;
+    private javax.swing.JLabel lbN2;
+    private javax.swing.JLabel lbRisultato;
+    private javax.swing.JLabel lbRisultatoTitle;
+    private javax.swing.JTextField tfN1;
+    private javax.swing.JTextField tfN2;
     // End of variables declaration//GEN-END:variables
 }

@@ -15,6 +15,8 @@ public class CalcolatriceForm extends javax.swing.JFrame {
     public CalcolatriceForm() {
         initComponents();
     }
+    
+    Calcolatrice c = new Calcolatrice();    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -67,7 +69,6 @@ public class CalcolatriceForm extends javax.swing.JFrame {
         lbRisultatoTitle.setText("Risultato:");
 
         lbRisultato.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lbRisultato.setForeground(new java.awt.Color(204, 204, 204));
         lbRisultato.setText(" ");
         lbRisultato.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(51, 255, 0)));
 
@@ -110,6 +111,11 @@ public class CalcolatriceForm extends javax.swing.JFrame {
         btnRisultato.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         btnRisultato.setForeground(new java.awt.Color(0, 255, 51));
         btnRisultato.setText("=");
+        btnRisultato.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRisultatoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -182,21 +188,37 @@ public class CalcolatriceForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfN2ActionPerformed
 
+    private void updateNumbers() {
+        String n1 = tfN1.getText();
+        String n2 = tfN2.getText();
+        
+        c.setN1(Float.parseFloat(n1));
+        c.setN2(Float.parseFloat(n2));
+    }
+    
     private void btnSommaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSommaActionPerformed
-        // TODO add your handling code here:
+        updateNumbers();
+        c.somma();
     }//GEN-LAST:event_btnSommaActionPerformed
 
     private void btnDifferenzaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDifferenzaActionPerformed
-        // TODO add your handling code here:
+        updateNumbers();
+        c.differenza();
     }//GEN-LAST:event_btnDifferenzaActionPerformed
 
     private void btnDivisioneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivisioneActionPerformed
-        // TODO add your handling code here:
+        updateNumbers();
+        c.divisione();
     }//GEN-LAST:event_btnDivisioneActionPerformed
 
     private void btnMoltiplicazioneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMoltiplicazioneActionPerformed
-        // TODO add your handling code here:
+        updateNumbers();
+        c.moltiplicazione();
     }//GEN-LAST:event_btnMoltiplicazioneActionPerformed
+
+    private void btnRisultatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRisultatoActionPerformed
+        lbRisultato.setText(""+c.getRisultato());
+    }//GEN-LAST:event_btnRisultatoActionPerformed
 
     /**
      * @param args the command line arguments

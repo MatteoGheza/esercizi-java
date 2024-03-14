@@ -16,7 +16,7 @@ public class jfTriangolo extends javax.swing.JFrame {
         initComponents();
     }
     
-    Quadrato q = new Quadrato();
+    Triangolo t = new Triangolo();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -32,13 +32,23 @@ public class jfTriangolo extends javax.swing.JFrame {
         lbPerimetro = new javax.swing.JLabel();
         btnPerimetro = new javax.swing.JButton();
         btnReset = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jTabbedPane5 = new javax.swing.JTabbedPane();
+        lbIntro = new javax.swing.JLabel();
+        tabbed = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        lbLato = new javax.swing.JLabel();
+        tfLato = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
+        lbBase = new javax.swing.JLabel();
+        tfBase = new javax.swing.JTextField();
+        lbAltezza = new javax.swing.JLabel();
+        tfAltezza = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
+        lbLato1 = new javax.swing.JLabel();
+        tfLato1 = new javax.swing.JTextField();
+        lbLato2 = new javax.swing.JLabel();
+        tfLato2 = new javax.swing.JTextField();
+        lbLato3 = new javax.swing.JLabel();
+        tfLato3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,13 +82,13 @@ public class jfTriangolo extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel1.setText("Seleziona tipo di triangolo per continuare:");
+        lbIntro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lbIntro.setText("Seleziona tipo di triangolo per continuare:");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setText("Lato:");
+        lbLato.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lbLato.setText("Lato:");
 
-        jTextField1.setText("jTextField1");
+        tfLato.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -86,48 +96,121 @@ public class jfTriangolo extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
+                .addComponent(lbLato)
                 .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(340, Short.MAX_VALUE))
+                .addComponent(tfLato, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTextField1)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE))
-                .addContainerGap(171, Short.MAX_VALUE))
+                    .addComponent(tfLato)
+                    .addComponent(lbLato, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
-        jTabbedPane5.addTab("tab1", jPanel1);
+        tabbed.addTab("T. Equilatero", jPanel1);
+
+        lbBase.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lbBase.setText("Base:");
+
+        tfBase.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        lbAltezza.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lbAltezza.setText("Altezza:");
+
+        tfAltezza.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 504, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(lbBase)
+                        .addGap(18, 18, 18)
+                        .addComponent(tfBase))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(lbAltezza)
+                        .addGap(18, 18, 18)
+                        .addComponent(tfAltezza, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 227, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tfBase)
+                    .addComponent(lbBase, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tfAltezza)
+                    .addComponent(lbAltezza, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(56, Short.MAX_VALUE))
         );
 
-        jTabbedPane5.addTab("tab2", jPanel2);
+        tabbed.addTab("T. Isoscele", jPanel2);
+
+        lbLato1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lbLato1.setText("Lato 1:");
+
+        tfLato1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        lbLato2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lbLato2.setText("Lato 2:");
+
+        tfLato2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        lbLato3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lbLato3.setText("Lato 3:");
+
+        tfLato3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 504, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(lbLato1)
+                        .addGap(18, 18, 18)
+                        .addComponent(tfLato1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(lbLato2)
+                        .addGap(18, 18, 18)
+                        .addComponent(tfLato2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(lbLato3)
+                        .addGap(18, 18, 18)
+                        .addComponent(tfLato3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 227, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tfLato1)
+                    .addComponent(lbLato1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tfLato2)
+                    .addComponent(lbLato2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tfLato3)
+                    .addComponent(lbLato3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        jTabbedPane5.addTab("tab3", jPanel3);
+        tabbed.addTab("T. Scaleno", jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -150,26 +233,27 @@ public class jfTriangolo extends javax.swing.JFrame {
                                         .addComponent(lbArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                             .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jLabel1)))
+                                .addComponent(lbIntro)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(btnReset))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jTabbedPane5)))
+                        .addComponent(btnReset)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tabbed, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(lbIntro)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tabbed, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnReset)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnPerimetro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lbPerimetro, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -177,26 +261,61 @@ public class jfTriangolo extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lbArea, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(50, 50, 50))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnPerimetroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPerimetroActionPerformed
-        q.setLato(Float.parseFloat(tfLato.getText()));
-        lbPerimetro.setText(""+q.trovaPerimetro());
+        int tipo = tabbed.getSelectedIndex();
+        t.setTipo(tipo);
+        switch(tipo) {
+            case 1 -> {
+                t.setLato(Float.parseFloat(tfLato.getText()));
+            }
+            case 2 -> {
+                t.setBase(Float.parseFloat(tfBase.getText()));
+                t.setAltezza(Float.parseFloat(tfAltezza.getText()));
+            }
+            case 3 -> {
+                t.setLato1(Float.parseFloat(tfLato1.getText()));
+                t.setLato2(Float.parseFloat(tfLato2.getText()));
+                t.setLato3(Float.parseFloat(tfLato3.getText()));
+            }
+        }
+        lbPerimetro.setText(""+t.trovaPerimetro());
     }//GEN-LAST:event_btnPerimetroActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         tfLato.setText("");
+        tfBase.setText("");
+        tfAltezza.setText("");
+        tfLato1.setText("");
+        tfLato2.setText("");
+        tfLato3.setText("");
         lbPerimetro.setText("");
         lbArea.setText("");
     }//GEN-LAST:event_btnResetActionPerformed
 
     private void btnAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAreaActionPerformed
-        q.setLato(Float.parseFloat(tfLato.getText()));
-        lbArea.setText(""+q.trovaArea());
+        int tipo = tabbed.getSelectedIndex();
+        t.setTipo(tipo);
+        switch(tipo) {
+            case 1 -> {
+                t.setLato(Float.parseFloat(tfLato.getText()));
+            }
+            case 2 -> {
+                t.setBase(Float.parseFloat(tfBase.getText()));
+                t.setAltezza(Float.parseFloat(tfAltezza.getText()));
+            }
+            case 3 -> {
+                t.setLato1(Float.parseFloat(tfLato1.getText()));
+                t.setLato2(Float.parseFloat(tfLato2.getText()));
+                t.setLato3(Float.parseFloat(tfLato3.getText()));
+            }
+        }
+        lbArea.setText(""+t.trovaArea());
     }//GEN-LAST:event_btnAreaActionPerformed
 
     /**
@@ -238,14 +357,24 @@ public class jfTriangolo extends javax.swing.JFrame {
     private javax.swing.JButton btnArea;
     private javax.swing.JButton btnPerimetro;
     private javax.swing.JButton btnReset;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTabbedPane jTabbedPane5;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lbAltezza;
     private javax.swing.JLabel lbArea;
+    private javax.swing.JLabel lbBase;
+    private javax.swing.JLabel lbIntro;
+    private javax.swing.JLabel lbLato;
+    private javax.swing.JLabel lbLato1;
+    private javax.swing.JLabel lbLato2;
+    private javax.swing.JLabel lbLato3;
     private javax.swing.JLabel lbPerimetro;
+    private javax.swing.JTabbedPane tabbed;
+    private javax.swing.JTextField tfAltezza;
+    private javax.swing.JTextField tfBase;
+    private javax.swing.JTextField tfLato;
+    private javax.swing.JTextField tfLato1;
+    private javax.swing.JTextField tfLato2;
+    private javax.swing.JTextField tfLato3;
     // End of variables declaration//GEN-END:variables
 }

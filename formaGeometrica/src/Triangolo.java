@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
-import java.lang.Math;
-
 /**
  *
  * @author utente 2023-24
@@ -22,18 +20,18 @@ public class Triangolo {
     private float lato3;
 
     public Triangolo(float lato) {
-        this.tipo = 1;
+        this.tipo = 0;
         this.lato = lato;
     }
     
     public Triangolo(float base, float altezza) {
-        this.tipo = 2;
+        this.tipo = 1;
         this.base = base;
         this.altezza = altezza;
     }
     
     public Triangolo(float lato1, float lato2, float lato3) {
-        this.tipo = 3;
+        this.tipo = 2;
         this.lato1 = lato1;
         this.lato2 = lato2;
         this.lato3 = lato3;
@@ -90,20 +88,20 @@ public class Triangolo {
     
     public float trovaPerimetro() {
         return switch (tipo) {
-            case 1 -> 3*lato;
-            case 2 -> base+altezza+(float)Math.sqrt(base*base+lato*lato);
+            case 0 -> 3*lato;
+            case 1 -> base+altezza+(float)Math.sqrt(base*base+lato*lato);
             default -> lato1+lato2+lato3;
         };
     }
     public float trovaArea() {
         switch(tipo) {
-            case 1 -> {
-                return (float) Math.sqrt(3)/4 * lato*lato;
+            case 0 -> {
+                return lato * lato * (float) Math.sqrt(3)/4;
             }
-            case 2 -> {
+            case 1 -> {
                 return base * altezza / 2;
             }
-            case 3 -> {
+            case 2 -> {
                 float semiPerimetro = trovaPerimetro()/2;
                 return (float) Math.sqrt(semiPerimetro*(semiPerimetro-lato1)*(semiPerimetro-lato2)*(semiPerimetro-lato3));
             }

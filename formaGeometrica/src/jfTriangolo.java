@@ -51,6 +51,7 @@ public class jfTriangolo extends javax.swing.JFrame {
         tfLato3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         btnArea.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnArea.setText("Trova area");
@@ -271,14 +272,14 @@ public class jfTriangolo extends javax.swing.JFrame {
         int tipo = tabbed.getSelectedIndex();
         t.setTipo(tipo);
         switch(tipo) {
-            case 1 -> {
+            case 0 -> {
                 t.setLato(Float.parseFloat(tfLato.getText()));
             }
-            case 2 -> {
+            case 1 -> {
                 t.setBase(Float.parseFloat(tfBase.getText()));
                 t.setAltezza(Float.parseFloat(tfAltezza.getText()));
             }
-            case 3 -> {
+            case 2 -> {
                 t.setLato1(Float.parseFloat(tfLato1.getText()));
                 t.setLato2(Float.parseFloat(tfLato2.getText()));
                 t.setLato3(Float.parseFloat(tfLato3.getText()));
@@ -302,14 +303,14 @@ public class jfTriangolo extends javax.swing.JFrame {
         int tipo = tabbed.getSelectedIndex();
         t.setTipo(tipo);
         switch(tipo) {
-            case 1 -> {
+            case 0 -> {
                 t.setLato(Float.parseFloat(tfLato.getText()));
             }
-            case 2 -> {
+            case 1 -> {
                 t.setBase(Float.parseFloat(tfBase.getText()));
                 t.setAltezza(Float.parseFloat(tfAltezza.getText()));
             }
-            case 3 -> {
+            case 2 -> {
                 t.setLato1(Float.parseFloat(tfLato1.getText()));
                 t.setLato2(Float.parseFloat(tfLato2.getText()));
                 t.setLato3(Float.parseFloat(tfLato3.getText()));
@@ -321,12 +322,9 @@ public class jfTriangolo extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+/*
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -345,14 +343,13 @@ public class jfTriangolo extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new jfRettangolo().setVisible(true);
             }
         });
     }
-
+*/
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnArea;
     private javax.swing.JButton btnPerimetro;

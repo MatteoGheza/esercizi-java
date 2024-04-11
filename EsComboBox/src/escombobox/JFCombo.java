@@ -76,7 +76,12 @@ public class JFCombo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
-        tfRisultato.setText((String) cb.getSelectedItem());
+        String item = cb.getSelectedItem().toString();
+        if(item.isBlank()) {
+            tfRisultato.setText("Nessuna selezione");
+        } else {
+            tfRisultato.setText(item);
+        }
     }//GEN-LAST:event_btnActionPerformed
 
     /**

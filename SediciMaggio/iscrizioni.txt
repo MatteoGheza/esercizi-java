@@ -1,0 +1,8 @@
+Nome: Nome
+Cognome: Cognome
+Gruppo: Elementari
+Numero di telefono: 12345
+Gite a cui è interessato: -Lova
+Attenzione: HA INTOLLERANZE ALIMENTARI o ALLERGIE!
+
+
